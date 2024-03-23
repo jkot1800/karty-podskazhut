@@ -10,7 +10,7 @@
   --accent-color: rgba(255, 171, 107, 1);
   /* шрифты */
   --main-font: Raleway;
-  --accent-font: 'STIX Two Text';
+  --accent-font: "STIX Two Text";
 }
 
 p,
@@ -71,3 +71,45 @@ figure {
 }
 
 /* Далее идет цитата и список (шаг 5) */
+
+.content__blockquote {
+  line-height: 200%;
+  font-style: italic;
+  width: 75%;
+  margin: 0 auto 1.5em auto;
+}
+
+.content__list {
+  list-style: none;
+  padding: 0 0 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content__list li {
+  position: relative;
+}
+
+.content__list li::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: -25px;
+  width: 15px;
+  height: 15px;
+  background-image: url(/images/marker-light.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content__text-block_type_first-lettered::first-letter {
+  display: inline-block;
+  background-color: var(--accent-color);
+  font-weight: 700;
+  padding: 0 4px 0 4px;
+  margin-right: 1px;
+  font-size: 33px;
+}
+
+/* Работа с изображением ШАГ 7 */
